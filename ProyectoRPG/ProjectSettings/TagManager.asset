@@ -41,3 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 3836110987
+    locked: 0
+  - name: Ground
+    uniqueID: 2168401261
+    locked: 0
+  - name: Sprites
+    uniqueID: 867802925
+    locked: 0
+  - name: AboveGround
+    uniqueID: 156933659
+    locked: 0
+  - name: AboveAll
+    uniqueID: 1354697263
+    locked: 0
