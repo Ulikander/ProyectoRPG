@@ -12,7 +12,6 @@ public class EnemyAI : Movement
     GameObject player;
     public enum Status { Idle, Attacking, Fleeing, Dead }
     public Status status = Status.Idle;
-    public bool canMove;
 
     public Enemy enemy;
 
@@ -96,6 +95,5 @@ public class EnemyAI : Movement
                 }
                 break;
         }
-        //if (canMove) Move(1, 1);
     }
 }
