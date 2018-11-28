@@ -11,7 +11,9 @@ public class Movement : MonoBehaviour
     public float movSpeed;
     public float movRunningSpeed;
     public bool running;
-    
+    public bool canMove;
+    public bool attacking;
+
     // Use this for initialization
     void Awake ()
     {
