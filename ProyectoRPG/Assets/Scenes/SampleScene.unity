@@ -1865,7 +1865,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   sr: {fileID: 411100422}
   movSpeed: 3
-  movRunningSpeed: 5
+  movRunningSpeed: 4
   running: 0
   canMove: 1
   attacking: 0
@@ -8583,12 +8583,14 @@ MonoBehaviour:
   rb: {fileID: 0}
   sr: {fileID: 1397012823}
   movSpeed: 3
-  movRunningSpeed: 6
+  movRunningSpeed: 4.7
   running: 0
   canMove: 1
   attacking: 0
   animations: {fileID: 1743337156}
   forceAnimated: 0
+  framesWalk: 0.2
+  framesRun: 0.1
   character:
     hpMax: 0
     hpCurrent: 0
@@ -8637,7 +8639,7 @@ MonoBehaviour:
   sr: {fileID: 1397012823}
   currentFrame: 0
   playing: 0
-  frameDuration: 0.2
+  frameDuration: 0.15
   lookingAt: 0
 --- !u!1 &1836728060
 GameObject:

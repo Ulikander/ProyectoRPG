@@ -8,6 +8,8 @@ public class Player : Movement
     [Header("Player")]
     public StandardAnimation animations;
     public bool forceAnimated;
+    public float framesWalk;
+    public float framesRun;
     public Character character;
 
     // Use this for initialization
@@ -19,10 +21,11 @@ public class Player : Movement
 	// Update is called once per frame
 	public override void Update ()
     {
+        AnimationCtrl();
         base.Update();
         InputAttackHandler();
         InputMovementHandler();
-        AnimationCtrl();
+        
 	}
 
     private void InputAttackHandler()
@@ -39,6 +42,11 @@ public class Player : Movement
 
         if (!canMove) return;
 
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+
+
+
         Move(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
     }
 
@@ -53,31 +61,33 @@ public class Player : Movement
         else
         {
             animations.playing = true;
+            animations.frameDuration = (!running) ? framesWalk : framesRun;
         }
 
         //0 -> DOWN | 1 -> LEFT | 2 -> RIGHT| 3 -> UP
-        if (Input.GetKeyDown(KeyCode.DownArrow) || (Input.GetKeyDown(KeyCode.DownArrow) && (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))))
-        {
-            animations.lookingAt = 0;
-            return;
-        }
+        
 
-        if (Input.GetKeyDown(KeyCode.UpArrow) || (Input.GetKeyDown(KeyCode.UpArrow) && (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))))
-        {
-            animations.lookingAt = 3;
-            return;
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             animations.lookingAt = 1;
-            return;
+            //return;
         }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             animations.lookingAt = 2;
-            return;
+            //return;
+        }
+
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            animations.lookingAt = 0;
+            //return;
+        }
+
+        {
+            animations.lookingAt = 3;
+            //return;
         }
     }
 }

@@ -15,13 +15,11 @@ public class StandardAnimation : MonoBehaviour
     public float frameDuration = 0.4f;
     float frameCont = 0f;
     public int lookingAt = 1;
-    
 
     
 	// Use this for initialization
 	void Start ()
     {
-        
         //StartCoroutine(Animation());
     }
 	
