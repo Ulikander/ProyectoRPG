@@ -8131,10 +8131,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a96cebeba570644c955d050a2d5ae70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 3
   isWalking: 0
   walkTime: 1
-  waitTime: 3
+  waitTime: 0.5
   walkZone: {fileID: 1981809082}
 --- !u!50 &1693782122
 Rigidbody2D:
@@ -8163,7 +8163,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1693782120}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6287935, y: -2.17, z: -0.010566298}
+  m_LocalPosition: {x: -0.51, y: -4.2, z: -0.010566298}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 833418610}
@@ -9109,8 +9109,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1981809081}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.27, y: -0.58, z: 0.041453205}
-  m_LocalScale: {x: 7.5875, y: 5.92, z: 1}
+  m_LocalPosition: {x: -0.84, y: -2.93, z: 0.041453205}
+  m_LocalScale: {x: 3.818637, y: 2.9794176, z: 0.50328}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
