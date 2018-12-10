@@ -12,6 +12,14 @@ public class Player : Movement
     public float framesRun;
     public Character character;
 
+    [Header("Logica Difusa")]
+    public static float reputation = 0;
+    public AnimationCurve goodGuy;
+    public AnimationCurve badGuy;
+
+    public float goodGuyValue;
+    public float badGuyValue;
+
     // Use this for initialization
     void Start()
     {
@@ -54,7 +62,7 @@ public class Player : Movement
     {
         if (forceAnimated)
             animations.playing = true;
-        else if (Mathf.Abs(rb.velocity.x) < 0.1f && Mathf.Abs(rb.velocity.y) < 0.1f)
+        else if (Mathf.Abs(rb.velocity.x) < 0.01f && Mathf.Abs(rb.velocity.y) < 0.01f)
         {
             animations.playing = false;
         }
@@ -85,9 +93,23 @@ public class Player : Movement
             //return;
         }
 
+        if(Input.GetKey(KeyCode.UpArrow))
         {
             animations.lookingAt = 3;
             //return;
         }
     }
+
+    //Benja ->
+    public void AddKarma(float value)
+    {
+        reputation += value;
+    }
+
+    public void EvaluateReputation()
+    {
+        goodGuyValue = goodGuy.Evaluate(reputation);
+        badGuyValue = badGuy.Evaluate(reputation);
+    }
+    //---------
 }

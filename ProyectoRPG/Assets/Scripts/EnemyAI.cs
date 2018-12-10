@@ -72,7 +72,7 @@ public class EnemyAI : Movement
                         break;
                     case Status.Attacking:
                         Vector3 move = (player.transform.position - transform.position).normalized;
-                        print("MOVE: " + move);
+                        //print("MOVE: " + move);
                         Move(move.x, move.y);
                         break;
                     case Status.Fleeing:
